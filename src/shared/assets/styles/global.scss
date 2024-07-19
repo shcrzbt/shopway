@@ -1,0 +1,48 @@
+@import "reset";
+@import "classes";
+@import "naive.styles";
+
+*,
+body {
+  font-family: "TT Uzum", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --rem: 10px;
+  font-size: var(--rem);
+
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+    --#{$key}-rgb: #{HexToRGB($value)};
+  }
+}
+
+@function clr($colorName, $opacity: 1) {
+  $color: unquote($colorName);
+  @return rgba(var(--#{$color}-rgb), $opacity);
+}
+
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@each $name, $values in $typography {
+  .#{$name} {
+    @include font($name);
+  }
+}
+
+@each $name, $value in $margins {
+  .m-#{$name} {
+    margin: $value;
+  }
+
+  .mt-#{$name} {
+      margin-top: $value;
+  }
+  
+  .mb-#{$name} {
+      margin-bottom: $value;
+  }
+}

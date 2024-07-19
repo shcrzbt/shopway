@@ -1,0 +1,18 @@
+.n-input {
+  &__suffix {
+    border-left: 1px solid #E7E8EA;
+    padding-left: 1.6rem;
+    margin-left: 2rem !important;
+  }
+
+  &__prefix {
+    border-right: 1px solid #E7E8EA;
+    padding-right: 1.6rem;
+    margin-right: 2rem !important;
+  }
+}
+
+.n-drawer-mask {
+  background-color: #00000059;
+  backdrop-filter: blur(.4rem);
+}
