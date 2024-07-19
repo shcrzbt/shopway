@@ -16,8 +16,7 @@ export const productRoutes: RouteRecordRaw[] = [
     name: ProductRouteNamesEnum.list,
     meta: {
       layout: LayoutNameEnum.main,
-      pageTitle: "product.list.title",
-      hideLayoutHeader: true
+      pageTitle: "product.list.title"
     },
     component: () => import("@/views/pages/product/list")
   }

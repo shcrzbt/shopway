@@ -1,3 +1,3 @@
-import ContractListPage from "./ui/ContractListPage.vue"
+import Page from "./ui/ProductListPage.vue"
 
-export default ContractListPage
+export default Page
